@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<a href="{{ route('clientes.index') }}">regresar</a>
+<link rel="stylesheet" href="{{ asset('css/cliente.css') }}"> 
+<a href="{{ route('clientes.index') }}" class="btn btn-secondary">regresar</a>
 <form method="post" action="{{ route('clientes.store') }}">
 
     @csrf
@@ -21,7 +22,7 @@
     <label for="">Numero de documento: </label>
     <input type="text" name="nro_doc"/>
 
-    <input type="submit" value="Create"/>
+    <input type="submit" value="Create" class="btn btn-primary"/>
 
 </form>
 
