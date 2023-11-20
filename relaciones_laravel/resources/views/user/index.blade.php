@@ -8,7 +8,7 @@
         <td>{{ $user->nro_doc }}</td>
         <td>{{ $user->nombre_usuario }}</td>
         <td>{{ $user->email }}</td>
-        <td>{{ $user->roles ? $user->roles->nombre_rol : 'sin rol' }}}</td>
+        <td>{{ $user->roles ? $user->roles->nombre_rol : 'sin rol' }}</td>
         <td>
             <a href="{{ route('user.shows', $user->id) }}">Ver</a>
             <a href="{{ route('user.edit', $user->id) }}">Editar</a>

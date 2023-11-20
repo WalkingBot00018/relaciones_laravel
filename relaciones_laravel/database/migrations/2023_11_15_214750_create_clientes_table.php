@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('nro_doc');
             $table->timestamps();
 
-            $table->foreign('nro_doc')->references('nro_doc')->on('users')->onDelete('cascade');
+            $table->foreign('nro_doc')->references('nro_doc')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
