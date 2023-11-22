@@ -1,5 +1,5 @@
 <h1>Editar cliente</h1>
-<form method="POST" action="{{ route('clientes.update', $clientes->id_cliente) }}">
+<form method="POST" action="{{ route('customer.update', $clientes->id_cliente) }}">
     @csrf
     @method('PUT')
 
@@ -20,4 +20,4 @@
 
     <button type="submit">Actualizar</button>
 </form>
-<a href="{{ route('clientes.shows', $clientes->id_cliente) }}">Ver Detalles</a>
+<a href="{{ route('customer.shows', $clientes->id_cliente) }}">Ver Detallesv</a>

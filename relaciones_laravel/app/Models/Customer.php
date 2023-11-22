@@ -7,10 +7,10 @@ use App\models\Reservas;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class clientes extends Model
+class Customer extends Model
 {
     use HasFactory;
-    protected $table = 'clientes';
+    protected $table = 'customer';
     protected $primaryKey = 'id_cliente';
     protected $fillable = [
         'nombre',
@@ -23,7 +23,5 @@ class clientes extends Model
     {
         return $this->belongsTo(User::class, 'id_cliente', 'id');
     }
-    public function Reservas(){
-        return $this->hasMany(Reservas::class, 'id_cliente', 'id_cliente');
-    }
+    
 }

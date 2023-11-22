@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('clientes', function (Blueprint $table) {
-            $table->id('id_cliente');
-            $table->string('nombre');
-            $table->string('apellido');
-            $table->string('correo');
-            $table->string('telefono');
+        Schema::create('employess', function (Blueprint $table) {
+            $table->id();
             $table->string('nro_doc');
+            $table->string('direccion_casa');
+            $table->string('trabajo');
+            $table->decimal('salario_basico',8,2);
+            $table->date('fecha_admision');
             $table->timestamps();
 
             $table->foreign('nro_doc')->references('nro_doc')->on('users')->onDelete('cascade')->onUpdate('cascade');
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('employess');
     }
 };

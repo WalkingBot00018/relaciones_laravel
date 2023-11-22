@@ -5,7 +5,7 @@
     <p>Correo: {{ $clientes->correo }}</p>
     <p>Telefono: {{ $clientes->telefono }}</p>
     <p>Numero documento: {{ $clientes->nro_doc }}</p>   
-    <a href="{{ route('clientes.index') }}">Volver al Listado</a>
+    <a href="{{ route('customer.index') }}">Volver al Listado</a>
 @else
     <p>cliente no encontrado</p>
 @endif

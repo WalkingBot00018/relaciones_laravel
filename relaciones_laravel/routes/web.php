@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RolesController;
-use App\Http\Controllers\ClientesController;
-use App\Http\Controllers\ReservasController;
-use App\Http\Controllers\HabitacionesController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\EmployessController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,30 +38,21 @@ Route::put('/rol/{role}', [RolesController::class, 'update'])->name('role.update
 Route::delete('/rol/{role}', [RolesController::class, 'destroy'])->name('role.destroy');
 
 
-Route::get('/cliente', [ClientesController::class, 'index'])->name('clientes.index');
-Route::get('/cliente/create', [ClientesController::class, 'create'])->name('clientes.create');
-Route::post('/cliente/store', [ClientesController::class, 'store'])->name('clientes.store');
-Route::get('/cliente/{clientes}', [ClientesController::class, 'show'])->name('clientes.shows');
-Route::get('/cliente/{clientes}/editar', [ClientesController::class, 'edit'])->name('clientes.edit');
-Route::put('/cliente/{clientes}', [ClientesController::class, 'update'])->name('clientes.update');
-Route::delete('/cliente/{clientes}', [ClientesController::class, 'destroy'])->name('clientes.destroy');
+Route::get('/cliente', [CustomerController::class, 'index'])->name('customer.index');
+Route::get('/cliente/create', [CustomerController::class, 'create'])->name('customer.create');
+Route::post('/cliente/store', [CustomerController::class, 'store'])->name('customer.store');
+Route::get('/cliente/{clientes}', [CustomerController::class, 'show'])->name('customer.shows');
+Route::get('/cliente/{clientes}/editar', [CustomerController::class, 'edit'])->name('customer.edit');
+Route::put('/cliente/{clientes}', [CustomerController::class, 'update'])->name('customer.update');
+Route::delete('/cliente/{clientes}', [CustomerController::class, 'destroy'])->name('customer.destroy');
 
 
-Route::get('/reservas', [ReservasController::class, 'index'])->name('reserva.index');
-Route::get('/reservas/create', [ReservasController::class, 'create'])->name('reserva.create');
-Route::post('/reservas/store', [ReservasController::class, 'store'])->name('reserva.store');
-Route::get('/reservas/{reservas}', [ReservasController::class, 'show'])->name('reserva.shows');
-Route::get('/reservas/{reservas}/editar', [ReservasController::class, 'edit'])->name('reserva.edit');
-Route::put('/reservas/{reservas}', [ReservasController::class, 'update'])->name('reserva.update');
-Route::delete('/reservas/{reservas}', [ReservasController::class, 'destroy'])->name('reserva.destroy');
+Route::get('/employee', [EmployessController::class, 'index'])->name('employee.index');
+Route::get('/employee/create', [EmployessController::class, 'create'])->name('employee.create');
+Route::post('/employee/store', [EmployessController::class, 'store'])->name('employee.store');
+Route::get('/employee/{empleados}', [EmployessController::class, 'show'])->name('employee.shows');
+Route::get('/employee/{empleados}/editar', [EmployessController::class, 'edit'])->name('employee.edit');
+Route::put('/employee/{empleados}', [EmployessController::class, 'update'])->name('employee.update');
+Route::delete('/employee/{empleados}', [EmployessController::class, 'destroy'])->name('employee.destroy');
 
-
-
-Route::get('/habitaciones', [HabitacionesController::class, 'index'])->name('room.index');
-Route::get('/habitaciones/create', [HabitacionesController::class, 'create'])->name('room.create');
-Route::post('/habitaciones/store', [HabitacionesController::class, 'store'])->name('room.store');
-Route::get('/habiatciones/{habitacion}', [HabitacionesController::class, 'show'])->name('room.shows');
-Route::get('/habitaciones/{habitacion}/editar', [HabitacionesController::class, 'edit'])->name('room.edit');
-Route::put('/habitaciones/{habitacion}', [HabitacionesController::class, 'update'])->name('room.update');
-Route::delete('/habitaciones/{habitacion}', [HabitacionesController::class, 'destroy'])->name('room.destroy');
 
