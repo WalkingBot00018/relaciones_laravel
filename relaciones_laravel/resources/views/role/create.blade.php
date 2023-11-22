@@ -15,3 +15,4 @@
     <input type="submit" value="Create" class="btn btn-primary"/>
 
 </form>
+@endsection

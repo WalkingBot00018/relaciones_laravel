@@ -47,12 +47,3 @@ Route::put('/cliente/{clientes}', [CustomerController::class, 'update'])->name('
 Route::delete('/cliente/{clientes}', [CustomerController::class, 'destroy'])->name('customer.destroy');
 
 
-Route::get('/employee', [EmployessController::class, 'index'])->name('employee.index');
-Route::get('/employee/create', [EmployessController::class, 'create'])->name('employee.create');
-Route::post('/employee/store', [EmployessController::class, 'store'])->name('employee.store');
-Route::get('/employee/{empleados}', [EmployessController::class, 'show'])->name('employee.shows');
-Route::get('/employee/{empleados}/editar', [EmployessController::class, 'edit'])->name('employee.edit');
-Route::put('/employee/{empleados}', [EmployessController::class, 'update'])->name('employee.update');
-Route::delete('/employee/{empleados}', [EmployessController::class, 'destroy'])->name('employee.destroy');
-
-
