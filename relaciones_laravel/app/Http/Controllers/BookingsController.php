@@ -10,12 +10,12 @@ class BookingsController extends Controller
 {
     public function index(){
         $reservas = Bookings::all();
-        return view('reserva.index', ['reservas'=>$reservas]);
+        return view('bookings.index', ['reservas'=>$reservas]);
     }
 
     public function create()
     {
-        return view("reserva.create");
+        return view("bookings.create");
     }
 
 
@@ -27,7 +27,7 @@ class BookingsController extends Controller
     // Carga la relación 'habitacion' en lugar de 'reservas'
         
 
-        return redirect()->route("reserva.index")->with("success", "Reserva registrada exitosamente");
+        return redirect()->route("bookings.index")->with("success", "Reserva registrada exitosamente");
         
     }
     public function show($id)
@@ -36,17 +36,17 @@ class BookingsController extends Controller
 
     if (!$reservas) {
         // Manejar el caso cuando el usuario no existe
-        return redirect()->route('reserva.index')->with('error', 'reserva no encontrado');
+        return redirect()->route('bookings.index')->with('error', 'reserva no encontrado');
     }
 
-    return view('reserva.shows', ['reservas' => $reservas]);
+    return view('bookings.shows', ['reservas' => $reservas]);
 }
 
 
 public function edit($id)
     {
         $reservas = Bookings::find($id);
-        return view('reserva.edit', compact('reservas'));
+        return view('bookings.edit', compact('reservas'));
     }
 
     public function update(Request $request, $id)
